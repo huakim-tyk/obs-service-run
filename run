@@ -10,11 +10,11 @@ while [ -n "$1" ];do
   esac
 done
 
-if [ -z "$output" ]; then
+if [ -z "$outdir" ]; then
   exit 1;
 fi 
 
-if [ -z "$run" ]; then
+if [ -z "$command" ]; then
   exit 1;
 fi 
 
