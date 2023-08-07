@@ -1,0 +1,23 @@
+#!/bin/bash
+
+while [ -n "$1" ];do
+  case $1 in
+    --*) 
+      export "${1:2}=$2"; shift; shift;
+    ;;
+  esac
+done
+
+if [ -z "$output" ]; then
+  exit 1;
+fi 
+
+if [ -z "$run" ]; then
+  exit 1;
+fi 
+
+cd "$output"
+
+eval "$run"
+
+exit 0
