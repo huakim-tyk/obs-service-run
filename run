@@ -5,6 +5,8 @@ while [ -n "$1" ];do
     --*) 
       export "${1:2}=$2"; shift; shift;
     ;;
+    *)
+    ;;
   esac
 done
 
